@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	
+	<script src="app/app.module.js"></script>
+	<script src="app/components/AnalogTimeReading/atrpController.js"></script>
+	<script src="app/components/Math/mathController.js"></script>
+	<script src="app/app.routes.js"></script>
+	
+</head>
+
+<body ng-app="mathPractice">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Ravi's Test Website</a>
+    </div>
+    <ul class="nav navbar-nav">
+		<li><a href="#">Home</a></li>
+		<li><a href="#atrp">Analog Time Reading Practice</a></li>
+		<li><a href="#mathp">Math Practice</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div ng-view></div>
+
+<div class="panel-footer" align="center">Ravi's Test Site &copy; 2016</div>
+</body>
+
+</html>

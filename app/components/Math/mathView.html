@@ -1,0 +1,52 @@
+﻿<div class="container">
+  <h2>Math Practice</h2>
+  <div class="panel panel-default">
+    <div class="panel-body">
+		<div class="panel panel-default">
+		  <div class="panel-heading"><h4>Problem</h4></div>
+		  <div class="panel-body" align="center">
+		  </div>
+				<table style="font-size:xx-large">
+					<tr>
+						<td width="60" align="right">{{currProblem.firstNum}}</td>
+						<td width="60" align="right">
+							<select style="font-size:xx-large" ng-model="selectedOperator" ng-options="op for op in operators"></select>					
+						</td>
+						<td width="60" align="right">{{currProblem.secondNum}}</td>
+						<td width="60" align="center">=</td>
+						<td width="60" align="right"><input id="ans" type="number" style="font-size:x-large;width:100px" ng-model="ans" ng-keypress="onEnter($event)"></td>
+						<td width="20px"></td>
+						<td style="text-align:right">
+							<button type="button" style="width:100px;font-size:large" ng-click="initNextProb(true)">Next</button>
+						</td>
+						<td width="20px"></td>
+						<td><button type="button" align="right" style="width:100px;font-size:large;" ng-click="reset()">Reset</button></td>
+					</tr>
+				</table>
+			</div>    
+				<h4>Results [{{resultCount}}]</h4>
+				<div class="table-responsive" style="overflow:auto; height:200px;" >
+					<table class="table table-bordered">
+				    <thead>
+				      <tr>
+				        <th>#</th>
+				        <th>Problem</th>
+				        <th></th>
+				        <th>Answer</th>
+				        <th>Result</th>
+				      </tr>
+				    </thead>
+					<tbody>
+					 <tr ng-repeat="ans in mathAnswers">
+					    <td style="color:{{ans.color}}">{{ $index + 1 }}</td>
+					    <td style="color:{{ans.color}}">{{ ans.firstNum }} {{ ans.operator }} {{ ans.secondNum }}</td>
+					    <td style="color:{{ans.color}}">=</td>
+					    <td style="color:{{ans.color}}">{{ ans.ans }}</td>
+					    <td style="color:{{ans.color}}">{{ ans.isCorrect }}</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>

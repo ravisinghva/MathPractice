@@ -1,0 +1,58 @@
+﻿<div class="container">
+  <h2>Analog Clock Time Practice</h2>
+  <div class="panel panel-default">
+    <div class="panel-body">
+	  <div class="row">
+	    <div class="col-sm-6">
+			<div class="panel panel-default">
+			  <div class="panel-heading" align="center"><h4>Clock Time</h4></div>
+			  <div class="panel-body" align="center"><canvas id="canvas" width="325" height="325" style="background-color:teal"></canvas></div>
+			</div>    
+	    </div>
+	    <div class="col-sm-6">
+			<div class="panel panel-default">
+			  <div class="panel-heading"><h4>Your Answer</h4></div>
+			  <div class="panel-body">
+				<table>
+					<tr>
+						<td><input class="form-control" id="hour" type="number" style="font-size:large;width:100px" ng-model="hourAns" ng-keypress="onEnter($event)"></td>
+						<td style="font-size:xx-large;width:20px;text-align:center"> : </td>
+						<td><input class="form-control" id="minute" type="number" style="font-size:large;width:100px" ng-model="minuteAns" ng-keypress="onEnter($event)"></td>
+						<td width="20px"></td>
+						<td style="text-align:right">
+							<button type="button" style="width:100px;font-size:large" ng-click="drawNextTime()">Next</button>
+						</td>
+						<td width="20px"></td>
+						<td><button type="button" align="right" style="width:100px;font-size:large;" ng-click="reset()">Reset</button></td>
+					</tr>
+				</table>
+				<h4>Results [{{resultCount}}]</h4>
+				<div class="table-responsive" style="overflow:auto; height:200px;" >
+					<table class="table table-bordered">
+				    <thead>
+				      <tr>
+				        <th>#</th>
+				        <th>Clock Time</th>
+				        <th>Answer</th>
+				        <th>Result</th>
+				      </tr>
+				    </thead>
+					<tbody>
+					 <tr ng-repeat="ans in artpAnswers">
+					    <td style="color:{{ans.color}}">{{ $index + 1 }}</td>
+					    <td style="color:{{ans.color}}">{{ ans.hour }} : {{ ans.minute }}</td>
+					    <td style="color:{{ans.color}}">{{ ans.hourAns }} : {{ ans.minuteAns }}</td>
+					    <td style="color:{{ans.color}}">{{ ans.isCorrect }}</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			  </div>
+			</div>    
+	    </div>
+	  </div>
+		
+    </div>
+  </div>
+</div>
+
