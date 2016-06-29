@@ -1,0 +1,30 @@
+<div class="container">
+	<h2>Search Web</h2>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<input id="ans" type="text" class="form-control"
+						ng-model="searchText" ng-keypress="onEnter($event)">
+					<button type="button" style="width: 100px; font-size: large"
+						ng-click="Search()">Search</button>
+				</div>
+			</div>
+			<h4>Results</h4>
+			<div class="table-responsive" style="overflow: auto; height: 200px;">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="sr in serachResults">
+							<td>{{sr}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
