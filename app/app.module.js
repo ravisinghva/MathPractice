@@ -2,4 +2,5 @@
 app.run(function($rootScope) {
     $rootScope.artpAnswers = [];
     $rootScope.mathAnswers = [];
+    $rootScope.serachResults = [];
 });
